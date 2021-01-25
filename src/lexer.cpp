@@ -4,25 +4,25 @@ Symbole * Lexer::Consulter() {
    if (!tampon) {
 
       if (tete==flux.length())
-         tampon = new Symbole(FIN);
+         tampon = new Fin;
       else
       {
 
          switch (flux[tete]) {
             case '(':
-               tampon = new Symbole(OPENPAR);
+               tampon = new ParentheseOuvrante;
                tete++;
                break;
             case ')':
-               tampon = new Symbole(CLOSEPAR);
+               tampon = new ParentheseFermante;
                tete++;
                break;
             case '*':
-               tampon = new Symbole(MULT);
+               tampon = new Mult;
                tete++;
                break;
             case '+':
-               tampon = new Symbole(PLUS);
+               tampon = new Plus;
                tete++;
                break;
             default:
@@ -37,7 +37,7 @@ Symbole * Lexer::Consulter() {
                   tampon = new Entier(resultat);
                }
                else {
-                  tampon = new Symbole(ERREUR);
+                  tampon = new Erreur;
                }
          }
       }

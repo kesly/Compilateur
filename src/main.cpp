@@ -1,17 +1,18 @@
-#include "../includes/lexer.h"
+#include "../includes/automate.h"
 #include <iostream>
 
+using namespace std;
 
 int main(void) {
-   string chaine("(1+34)*123");
 
-   Lexer l(chaine);
+  // string chaine("(1+34)*123");
+  string chaine;
 
-   Symbole * s;
-   while(*(s=l.Consulter())!=FIN) {
-      s->Affiche();
-      cout<<endl;
-      l.Avancer();
-   }
+  cout << "Expression :" << endl;
+  cin >> chaine;
+
+  Automate * automate = new Automate(chaine);
+  automate->lancer();
+
    return 0;
 }

@@ -12,6 +12,7 @@ class Automate {
   public:
     Automate(string chaine);
     ~Automate();
+    void lancer();
     void decalage(Symbole * s, Etat * e);
     void reduction(int n, Symbole * s);
   protected:

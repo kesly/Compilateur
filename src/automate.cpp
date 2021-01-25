@@ -1,9 +1,22 @@
 #include "../includes/automate.h"
 #include "../includes/state.h"
+#include <iostream>
+
+using namespace std;
 
 Automate::Automate(string chaine) {
   lexer = new Lexer(chaine);
-  statestack.push_back(new E0());
+  statestack.push_back(new E0);
+}
+
+void Automate::lancer() {
+  Symbole * s;
+
+  while(*(s=lexer->Consulter()) != FIN) {
+     s->Affiche();
+     cout<<endl;
+     lexer->Avancer();
+  }
 }
 
 void Automate::decalage(Symbole * s, Etat * e) {
