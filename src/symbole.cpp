@@ -1,4 +1,4 @@
-#include "symbole.h"
+#include "../includes/symbole.h"
 #include <iostream>
 
 void Symbole::Affiche() {
@@ -9,4 +9,3 @@ void Entier::Affiche() {
    Symbole::Affiche();
    cout<<"("<<valeur<<")";
 }
-

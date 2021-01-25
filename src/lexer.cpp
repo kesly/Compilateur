@@ -1,4 +1,4 @@
-#include "lexer.h"
+#include "../includes/lexer.h"
 
 Symbole * Lexer::Consulter() {
    if (!tampon) {
@@ -48,4 +48,3 @@ Symbole * Lexer::Consulter() {
 void Lexer::Avancer() {
    tampon = nullptr;
 }
-

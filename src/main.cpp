@@ -1,5 +1,5 @@
+#include "../includes/lexer.h"
 #include <iostream>
-#include "lexer.h"
 
 
 int main(void) {
@@ -15,4 +15,3 @@ int main(void) {
    }
    return 0;
 }
-
