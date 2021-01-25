@@ -1,5 +1,6 @@
 #include "../includes/state.h"
 
+Etat::Etat(string n) { name = n; }
 E0::E0() : Etat("État 0") {}
 E1::E1() : Etat("État 1") {}
 E2::E2() : Etat("État 2") {}
