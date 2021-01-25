@@ -18,7 +18,7 @@ class Etat {
 
 class E0 : public Etat {
     public:
-        E0(string name) : Etat(name) {}
+        E0();
         virtual ~E0();
         bool transition(Automate & automate, Symbole * s);
 };

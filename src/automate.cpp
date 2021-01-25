@@ -1,11 +1,13 @@
 #include "../includes/automate.h"
+#include "../includes/state.h"
 
-Automate::Automate() {
-
+Automate::Automate(string chaine) {
+  lexer = new Lexer(chaine);
+  statestack.push_back(new E0());
 }
 
 void Automate::decalage(Symbole * s, Etat * e) {
-  symbolstack.push_back(s);
+  symbolestack.push_back(s);
   statestack.push_back(e);
   if(s->isTerminal()) {
     lexer->Avancer();
