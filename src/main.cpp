@@ -15,4 +15,5 @@ int main(void) {
   automate->lancer();
 
    return 0;
+
 }

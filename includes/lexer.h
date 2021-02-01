@@ -9,12 +9,13 @@ class Lexer {
    public:
       Lexer(string s) : flux(s), tete(0), tampon(nullptr) { }
       ~Lexer() { }
-
       Symbole * Consulter();
       void Avancer();
+      void ajouter(Symbole * s);
 
    protected:
       string flux;
       unsigned int tete;
       Symbole * tampon;
+
 };

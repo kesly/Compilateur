@@ -1,6 +1,7 @@
 #include "../includes/lexer.h"
 
 Symbole * Lexer::Consulter() {
+
    if (!tampon) {
 
       if (tete==flux.length())
@@ -43,8 +44,9 @@ Symbole * Lexer::Consulter() {
       }
    }
    return tampon;
+
 }
 
-void Lexer::Avancer() {
-   tampon = nullptr;
-}
+void Lexer::Avancer() { tampon = nullptr; }
+
+void Lexer::ajouter(Symbole * s) { tampon = s; }
